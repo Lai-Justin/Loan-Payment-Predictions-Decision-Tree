@@ -32,19 +32,6 @@ loans.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -166,19 +153,6 @@ loans.describe()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -434,72 +408,6 @@ plt.figure(figsize=(12,7))
 sns.countplot(x='purpose',hue='not.fully.paid',data=loans,palette='Set1')
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    AttributeError                            Traceback (most recent call last)
-
-    Cell In[11], line 2
-          1 plt.figure(figsize=(12,7))
-    ----> 2 sns.countplot(x='purpose',hue='not.fully.paid',data=loans,palette='Set1')
-    
-
-    File c:\Users\justi\anaconda3\Lib\site-packages\seaborn\categorical.py:2955, in countplot(data, x, y, hue, order, hue_order, orient, color, palette, saturation, width, dodge, ax, **kwargs)
-       2952 if ax is None:
-       2953     ax = plt.gca()
-    -> 2955 plotter.plot(ax, kwargs)
-       2956 return ax
-    
-
-    File c:\Users\justi\anaconda3\Lib\site-packages\seaborn\categorical.py:1587, in _BarPlotter.plot(self, ax, bar_kws)
-       1585 """Make the plot."""
-       1586 self.draw_bars(ax, bar_kws)
-    -> 1587 self.annotate_axes(ax)
-       1588 if self.orient == "h":
-       1589     ax.invert_yaxis()
-    
-
-    File c:\Users\justi\anaconda3\Lib\site-packages\seaborn\categorical.py:767, in _CategoricalPlotter.annotate_axes(self, ax)
-        764     ax.set_ylim(-.5, len(self.plot_data) - .5, auto=None)
-        766 if self.hue_names is not None:
-    --> 767     ax.legend(loc="best", title=self.hue_title)
-    
-
-    File c:\Users\justi\anaconda3\Lib\site-packages\matplotlib\axes\_axes.py:322, in Axes.legend(self, *args, **kwargs)
-        204 @_docstring.dedent_interpd
-        205 def legend(self, *args, **kwargs):
-        206     """
-        207     Place a legend on the Axes.
-        208 
-       (...)
-        320     .. plot:: gallery/text_labels_and_annotations/legend.py
-        321     """
-    --> 322     handles, labels, kwargs = mlegend._parse_legend_args([self], *args, **kwargs)
-        323     self.legend_ = mlegend.Legend(self, handles, labels, **kwargs)
-        324     self.legend_._remove_method = self._remove_legend
-    
-
-    File c:\Users\justi\anaconda3\Lib\site-packages\matplotlib\legend.py:1361, in _parse_legend_args(axs, handles, labels, *args, **kwargs)
-       1357     handles = [handle for handle, label
-       1358                in zip(_get_legend_handles(axs, handlers), labels)]
-       1360 elif len(args) == 0:  # 0 args: automatically detect labels and handles.
-    -> 1361     handles, labels = _get_legend_handles_labels(axs, handlers)
-       1362     if not handles:
-       1363         log.warning(
-       1364             "No artists with labels found to put in legend.  Note that "
-       1365             "artists whose label start with an underscore are ignored "
-       1366             "when legend() is called with no argument.")
-    
-
-    File c:\Users\justi\anaconda3\Lib\site-packages\matplotlib\legend.py:1291, in _get_legend_handles_labels(axs, legend_handler_map)
-       1289 for handle in _get_legend_handles(axs, legend_handler_map):
-       1290     label = handle.get_label()
-    -> 1291     if label and not label.startswith('_'):
-       1292         handles.append(handle)
-       1293         labels.append(label)
-    
-
-    AttributeError: 'numpy.int64' object has no attribute 'startswith'
 
 
 
