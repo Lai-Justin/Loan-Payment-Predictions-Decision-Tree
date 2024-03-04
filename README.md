@@ -366,7 +366,7 @@ plt.xlabel('FICO')
 
 
 
-    Text(0.5, 0, 'FICO')
+    
 
 
 
@@ -392,7 +392,7 @@ plt.xlabel('FICO')
 
 
 
-    Text(0.5, 0, 'FICO')
+    
 
 
 
@@ -425,7 +425,7 @@ sns.jointplot(x='fico',y='int.rate',data=loans,color='purple')
 
 
 
-    <seaborn.axisgrid.JointGrid at 0x1d2e884e150>
+    
 
 
 
@@ -444,12 +444,12 @@ sns.lmplot(y='int.rate',x='fico',data=loans,hue='credit.policy', col='not.fully.
 
 
 
-    <seaborn.axisgrid.FacetGrid at 0x1d2e923a610>
+    
 
 
 
 
-    <Figure size 1100x700 with 0 Axes>
+    
 
 
 
