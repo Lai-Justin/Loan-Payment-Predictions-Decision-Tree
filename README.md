@@ -2,7 +2,7 @@
 
 ## Description
 
-For better or for worse, loan lending and debt repayment forms the bedrock of efficient and productive allocation of economic resources in our modern financial systems. In the realm of financial institutions, determining the creditworthiness of loan applicants is crucial for minimizing default risks and maximizing profitability. This project aims to leverage the power of machine learning, specifically decision trees, to predict the repayment status of loans. To build this decision tree, I will be using lending data from peer-to-peer lending service LendingClub from the years 2007 to 2010.
+For better or for worse, loan lending and debt repayment form the bedrock of efficient and productive allocation of economic resources in our modern financial systems. In the realm of financial institutions, determining the creditworthiness of loan applicants is crucial for minimizing default risks and maximizing profitability. This project aims to leverage the power of machine learning, specifically decision trees, to predict the repayment status of loans. To build this decision tree, I will be using lending data from peer-to-peer lending service LendingClub from the years 2007 to 2010.
 
 ## Code
 
